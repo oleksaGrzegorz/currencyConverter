@@ -1,4 +1,3 @@
-const formElement = document.querySelector(".form");
 const inputElement = document.querySelector(".form__input");
 const buttonElement = document.querySelector(".form__button");
 const resultElement = document.querySelector(".form__result");
