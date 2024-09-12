@@ -1,0 +1,13 @@
+.form {
+   background-color: sandybrown;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.form__legend {
+    font-size: 30px;
+    background-color: aliceblue;
+    padding: 2px;
+    text-align: center;
+}
