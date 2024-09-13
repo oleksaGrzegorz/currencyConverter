@@ -13,11 +13,12 @@
     <form class="form">
         <legend class="form__legend">Currency converter</legend>
         <p>
-            <input class="form__input" type="number">
+            <input class="form__input" type="number" required min="1" step="any">
             PLN to
-            <select class="form__select" name="currencies">
-                <option class="form_selectOption">EUR</option>
-                <option class="form_selectOption">USD</option>
+            <select class="form__select" name="currencies" required>
+                <option value="">Select currencies</option>
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
             </select>
         </p>
         <p>
