@@ -5,7 +5,6 @@ const selectElement = document.querySelector(".form__select");
 
 buttonElement.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("click");
 
   const currencies = selectElement.value;
   const amount = parseFloat(inputElement.value);
