@@ -2,6 +2,9 @@
 
 link: https://oleksagrzegorz.github.io/currencyConverter/
 
+![Zrzut ekranu 2024-09-13 o 17 41 49](https://github.com/user-attachments/assets/fbb3b17c-d62a-4a6a-a968-3e8aeb011639)
+
+
 A basic web application for converting PLN (Polish Zloty) to EUR (Euro) or USD (US Dollar).
 
 ## Description
