@@ -7,7 +7,7 @@ buttonElement.addEventListener("click", (e) => {
   e.preventDefault();
 
   const currencies = selectElement.value;
-  const amount = parseFloat(inputElement.value);
+  const amount = +inputElement.value;
 
   let EUR = 4.3;
   let USD = 5;
@@ -19,9 +19,7 @@ buttonElement.addEventListener("click", (e) => {
       break;
     case "USD":
       result = amount / USD;
-      break;
-    default:
-      console.log("inne");
+      break; 
   }
   resultElement.innerText = `${inputElement.value} PLN = ${result.toFixed(2)} ${currencies}`;
 });
