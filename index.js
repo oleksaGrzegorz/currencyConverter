@@ -24,5 +24,5 @@ buttonElement.addEventListener("click", (e) => {
     default:
       console.log("inne");
   }
-  resultElement.innerText = result.toFixed(2);
+  resultElement.innerText = `${inputElement.value} PLN = ${result.toFixed(2)} ${currencies}`;
 });
