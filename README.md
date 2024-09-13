@@ -1,5 +1,7 @@
 # Currency Converter
 
+link: https://oleksagrzegorz.github.io/currencyConverter/
+
 A basic web application for converting PLN (Polish Zloty) to EUR (Euro) or USD (US Dollar).
 
 ## Description
