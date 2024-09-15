@@ -5,21 +5,30 @@ const selectElement = document.querySelector(".form__select");
 
 buttonElement.addEventListener("click", (e) => {
   e.preventDefault();
+  calculateResult();
+});
 
-  const currencies = selectElement.value;
+function calculateResult() {
+  const currency = selectElement.value;
   const amount = +inputElement.value;
+  let result;
 
   let EUR = 4.3;
   let USD = 5;
-  let result;
 
-  switch (currencies) {
+  switch (currency) {
     case "EUR":
       result = amount / EUR;
       break;
     case "USD":
       result = amount / USD;
-      break; 
+      break;
   }
-  resultElement.innerText = `${inputElement.value} PLN = ${result.toFixed(2)} ${currencies}`;
-});
+showResult(amount, result, currency);
+}
+
+function showResult(amount, result, currency) {
+  resultElement.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
+};
+
+
