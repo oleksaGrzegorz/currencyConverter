@@ -1,6 +1,7 @@
 .body {
     background-image: url('images/body_money.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .form {
