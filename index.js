@@ -8,7 +8,7 @@ buttonElement.addEventListener("click", (e) => {
   calculateResult();
 });
 
-function calculateResult() {
+const calculateResult = () => {
   const currency = selectElement.value;
   const amount = +inputElement.value;
   let result;
@@ -24,11 +24,9 @@ function calculateResult() {
       result = amount / USD;
       break;
   }
-showResult(amount, result, currency);
-}
-
-function showResult(amount, result, currency) {
-  resultElement.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
+  showResult(amount, result, currency);
 };
 
-
+const showResult = (amount, result, currency) => {
+  resultElement.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
+};
