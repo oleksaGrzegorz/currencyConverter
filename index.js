@@ -17,8 +17,8 @@
     const currency = selectElement.value;
     const amount = +inputElement.value;
     let result;
-    let EUR = 4.3;
-    let USD = 5;
+    const EUR = 4.3 ;
+    const USD = 5;
 
     switch (currency) {
       case "EUR":
@@ -34,7 +34,9 @@
   const showResult = (amount, result, currency) => {
     const resultElement = document.querySelector(".form__result");
 
-    resultElement.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
+    resultElement.innerText = `${amount} PLN = ${result.toFixed(
+      2
+    )} ${currency}`;
   };
 
   init();
