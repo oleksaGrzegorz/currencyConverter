@@ -1,34 +1,41 @@
 {
-  const inputElement = document.querySelector(".form__input");
-const buttonElement = document.querySelector(".form__button");
-const resultElement = document.querySelector(".form__result");
-const selectElement = document.querySelector(".form__select");
+  const init = () => {
+    const buttonElement = document.querySelector(".form__button");
 
-buttonElement.addEventListener("click", (e) => {
-  e.preventDefault();
-  calculateResult();
-});
+    buttonElement.addEventListener("click", onFormClick);
+  };
 
-const calculateResult = () => {
-  const currency = selectElement.value;
-  const amount = +inputElement.value;
-  let result;
-  let EUR = 4.3;
-  let USD = 5;
+  const onFormClick = (e) => {
+    e.preventDefault();
+    calculateResult();
+  };
 
-  switch (currency) {
-    case "EUR":
-      result = amount / EUR;
-      break;
-    case "USD":
-      result = amount / USD;
-      break;
-  }
-  showResult(amount, result, currency);
-};
+  const calculateResult = () => {
+    const selectElement = document.querySelector(".form__select");
+    const inputElement = document.querySelector(".form__input");
 
-const showResult = (amount, result, currency) => {
-  resultElement.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
-};
+    const currency = selectElement.value;
+    const amount = +inputElement.value;
+    let result;
+    let EUR = 4.3;
+    let USD = 5;
 
+    switch (currency) {
+      case "EUR":
+        result = amount / EUR;
+        break;
+      case "USD":
+        result = amount / USD;
+        break;
+    }
+    showResult(amount, result, currency);
+  };
+
+  const showResult = (amount, result, currency) => {
+    const resultElement = document.querySelector(".form__result");
+
+    resultElement.innerText = `${amount} PLN = ${result.toFixed(2)} ${currency}`;
+  };
+
+  init();
 }
